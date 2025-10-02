@@ -3,10 +3,10 @@
 FROM openjdk:latest
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /src
 
 # Copy the compiled Java code files to the container's working directory
-COPY *.class /app/
+COPY /src/*.class /src/
 
 # Expose the port on which the HTTP server will run (must match the port used in the Java code)
 EXPOSE 8080
